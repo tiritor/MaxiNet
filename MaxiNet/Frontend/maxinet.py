@@ -1267,7 +1267,7 @@ class Experiment(object):
 
         #set MTU if necessary
         if (self.config.run_with_1500_mtu()):
-            self.setMTU(self.get_node(name), 1450)
+            self.setMTU(self.get_node(name), 1350)
 
         return self.get(name)
 
@@ -1292,7 +1292,7 @@ class Experiment(object):
 
         #set MTU if necessary
         if (self.config.run_with_1500_mtu()):
-            self.setMTU(self.get_node(name), 1450)
+            self.setMTU(self.get_node(name), 1350)
 
         return self.get(name)
 
@@ -1398,8 +1398,8 @@ class Experiment(object):
             else:
                 node2.configDefault()
         if(self.config.run_with_1500_mtu()):
-            self.setMTU(node1, 1450)
-            self.setMTU(node2, 1450)
+            self.setMTU(node1, 1350)
+            self.setMTU(node2, 1350)
 
     def get_node(self, node):
         """Return NodeWrapper instance that is specified by nodename.
@@ -1510,7 +1510,7 @@ class Experiment(object):
         if (self.config.run_with_1500_mtu()):
             for topo in subtopos:
                 for host in topo.nodes():
-                    self.setMTU(self.get(host), 1450)
+                    self.setMTU(self.get(host), 1350)
 
         #deactivate TSO if needed
         if (self.config.deactivateTSO()):
